@@ -12,9 +12,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: AIAutoClicker
 
     steps:
       - name: Checkout repository
@@ -27,6 +24,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build Debug APK
+        working-directory: AIAutoClicker
         run: |
           chmod +x gradlew
           ./gradlew assembleDebug --stacktrace
