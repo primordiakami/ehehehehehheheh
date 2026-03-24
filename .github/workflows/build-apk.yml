@@ -24,13 +24,15 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Fix line endings
-        working-directory: AIAutoClicker
-        run: dos2unix gradlew || true
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Build Debug APK
         working-directory: AIAutoClicker
         run: |
+          tr -d '
+' < gradlew > gradlew.tmp
+          mv gradlew.tmp gradlew
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
 
