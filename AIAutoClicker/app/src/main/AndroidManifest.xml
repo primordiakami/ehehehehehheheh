@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.aiautoclicker">
+
+    <!-- Permissions for auto clicker functionality -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.SCREEN_CAPTURE" />
+    <uses-permission android:name="android.permission.PROJECT_MEDIA" />
+
+    <application
+        android:name=".AutoClickerApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AIAutoClicker"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="34">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AIAutoClicker.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Python Console Activity -->
+        <activity
+            android:name=".PythonConsoleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AIAutoClicker.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Task Editor Activity -->
+        <activity
+            android:name=".TaskEditorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AIAutoClicker.NoActionBar" />
+
+        <!-- Pattern Recorder Activity -->
+        <activity
+            android:name=".PatternRecorderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AIAutoClicker.Transparent" />
+
+        <!-- Accessibility Service for Auto Clicking -->
+        <service
+            android:name=".service.AutoClickerAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- Floating Window Service -->
+        <service
+            android:name=".service.FloatingControlService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+        <!-- Screen Capture Service -->
+        <service
+            android:name=".service.ScreenCaptureService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+        <!-- Task Execution Service -->
+        <service
+            android:name=".service.TaskExecutionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+        <!-- Python Bridge Service -->
+        <service
+            android:name=".python.PythonBridgeService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

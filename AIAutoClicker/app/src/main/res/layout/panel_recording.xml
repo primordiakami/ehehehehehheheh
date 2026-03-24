@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_floating_controls"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pattern Recorder"
+        android:textColor="@color/on_surface"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_start_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Recording"
+            style="@style/ActionButton" />
+
+        <Button
+            android:id="@+id/btn_save_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Save"
+            style="@style/ControlButton" />
+
+        <Button
+            android:id="@+id/btn_clear_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Clear"
+            style="@style/ControlButton" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Close"
+            style="@style/ControlButton" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Touch the screen to record your pattern"
+        android:textColor="@color/on_surface_secondary"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

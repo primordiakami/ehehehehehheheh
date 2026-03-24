@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Auto Clicker</string>
+    <string name="app_description">Advanced AI-powered auto clicker with Python scripting</string>
+    
+    <!-- Main Activity -->
+    <string name="start_service">Start Service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="open_console">Python Console</string>
+    <string name="create_task">Create Task</string>
+    <string name="record_pattern">Record Pattern</string>
+    <string name="settings">Settings</string>
+    <string name="tasks">Tasks</string>
+    <string name="console">Console</string>
+    
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_description">AI Auto Clicker Accessibility Service - Required for performing automated clicks and gestures</string>
+    <string name="accessibility_service_label">AI Auto Clicker Service</string>
+    
+    <!-- Floating Window -->
+    <string name="floating_control_title">AI Auto Clicker Control</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="record">Record</string>
+    <string name="settings_floating">Settings</string>
+    <string name="close">Close</string>
+    
+    <!-- Python Console -->
+    <string name="console_hint">Enter Python code here...</string>
+    <string name="run_code">Run</string>
+    <string name="clear_console">Clear</string>
+    <string name="save_script">Save</string>
+    <string name="load_script">Load</string>
+    <string name="console_welcome">AI Auto Clicker Python Console v1.0\nType help() for available commands\n</string>
+    
+    <!-- Task Editor -->
+    <string name="task_name">Task Name</string>
+    <string name="task_description">Description</string>
+    <string name="add_step">Add Step</string>
+    <string name="remove_step">Remove</string>
+    <string name="move_up">Up</string>
+    <string name="move_down">Down</string>
+    <string name="save_task">Save Task</string>
+    <string name="cancel">Cancel</string>
+    <string name="click">Click</string>
+    <string name="swipe">Swipe</string>
+    <string name="wait">Wait</string>
+    <string name="condition">Condition</string>
+    <string name="loop">Loop</string>
+    <string name="python_code">Python Code</string>
+    
+    <!-- Recognition Types -->
+    <string name="color_recognition">Color</string>
+    <string name="text_recognition">Text</string>
+    <string name="image_recognition">Image</string>
+    <string name="pattern_recognition">Pattern</string>
+    <string name="event_recognition">Event</string>
+    
+    <!-- Messages -->
+    <string name="permission_required">Permission Required</string>
+    <string name="overlay_permission_message">Please grant overlay permission to show floating controls</string>
+    <string name="accessibility_permission_message">Please enable accessibility service for auto-clicking</string>
+    <string name="grant_permission">Grant</string>
+    <string name="dismiss">Dismiss</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">AI Auto Clicker Service</string>
+    <string name="notification_channel_description">Running auto clicker services</string>
+    <string name="service_running">AI Auto Clicker is running</string>
+    <string name="tap_to_open">Tap to open controls</string>
+    
+    <!-- Pattern Recorder -->
+    <string name="recording_started">Recording started - Perform your actions</string>
+    <string name="recording_stopped">Recording stopped</string>
+    <string name="recording_saved">Pattern saved</string>
+    <string name="touch_to_record">Touch screen to record points</string>
+    
+    <!-- Recognition Settings -->
+    <string name="recognition_area">Recognition Area</string>
+    <string name="resize_area">Resize</string>
+    <string name="confidence_threshold">Confidence Threshold</string>
+    <string name="color_tolerance">Color Tolerance</string>
+    <string name="scan_interval">Scan Interval (ms)</string>
+    
+    <!-- Error Messages -->
+    <string name="error_no_accessibility">Accessibility service not enabled</string>
+    <string name="error_invalid_script">Invalid Python script</string>
+    <string name="error_recognition_failed">Recognition failed</string>
+    <string name="error_task_execution">Task execution error</string>
+</resources>

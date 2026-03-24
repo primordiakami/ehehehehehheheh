@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#00BCD4</color>
+    <color name="primary_dark">#0097A7</color>
+    <color name="primary_light">#B2EBF2</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF9800</color>
+    <color name="secondary_dark">#F57C00</color>
+    <color name="accent">#FF5722</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2D2D2D</color>
+    
+    <!-- Text Colors -->
+    <color name="on_surface">#FFFFFF</color>
+    <color name="on_surface_secondary">#B3B3B3</color>
+    <color name="on_surface_disabled">#666666</color>
+    
+    <!-- Console Colors -->
+    <color name="console_background">#0D0D0D</color>
+    <color name="console_text">#00FF00</color>
+    <color name="console_error">#FF4444</color>
+    <color name="console_warning">#FFAA00</color>
+    <color name="console_info">#00AAFF</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Recognition Colors -->
+    <color name="recognition_area_border">#00FF00</color>
+    <color name="recognition_area_fill">#2000FF00</color>
+    <color name="match_highlight">#FFEB3B</color>
+    
+    <!-- Floating Window -->
+    <color name="floating_bg">#CC1E1E1E</color>
+    <color name="floating_border">#00BCD4</color>
+    
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Task Type Colors -->
+    <color name="task_click">#4CAF50</color>
+    <color name="task_swipe">#2196F3</color>
+    <color name="task_wait">#9E9E9E</color>
+    <color name="task_condition">#FF9800</color>
+    <color name="task_loop">#9C27B0</color>
+    <color name="task_python">#FF5722</color>
+</resources>
