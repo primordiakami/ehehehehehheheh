@@ -23,13 +23,20 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Check Gradle wrapper
+        working-directory: AIAutoClicker
+        run: |
+          cat gradle/wrapper/gradle-wrapper.properties
+          ls -la gradle/wrapper/
+
       - name: Build Debug APK
         working-directory: AIAutoClicker
         run: |
-          ls -la
-          java -version
           chmod +x gradlew
-          ./gradlew assembleDebug --stacktrace 2>&1 || true
+          wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip -O /tmp/gradle.zip
+          unzip -q /tmp/gradle.zip -d /tmp/gradle
+          export PATH=$PATH:/tmp/gradle/gradle-8.7/bin
+          gradle assembleDebug --stacktrace 2>&1 || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
