@@ -22,11 +22,12 @@ jobs:
       - name: Update local.properties
         working-directory: AIAutoClicker
         run: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-      - name: Build Debug APK
+      - name: Debug gradlew
         working-directory: AIAutoClicker
         run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          file gradlew
+          head -1 gradlew | cat -A
+          bash gradlew assembleDebug --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
