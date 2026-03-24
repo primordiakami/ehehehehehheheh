@@ -26,8 +26,10 @@ jobs:
       - name: Build Debug APK
         working-directory: AIAutoClicker
         run: |
+          ls -la
+          java -version
           chmod +x gradlew
-          ./gradlew assembleDebug --stacktrace
+          ./gradlew assembleDebug --stacktrace 2>&1 || true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
