@@ -19,6 +19,9 @@ jobs:
           distribution: 'temurin'
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+      - name: Update local.properties
+        working-directory: AIAutoClicker
+        run: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
       - name: Build Debug APK
         working-directory: AIAutoClicker
         run: |
