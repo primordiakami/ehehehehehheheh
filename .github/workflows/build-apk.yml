@@ -12,6 +12,10 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: AIAutoClicker
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,7 +28,6 @@ jobs:
 
       - name: Build Debug APK
         run: |
-          cd AIAutoClicker
           chmod +x gradlew
           ./gradlew assembleDebug --stacktrace
 
