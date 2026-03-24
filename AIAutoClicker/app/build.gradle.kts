@@ -63,11 +63,6 @@ chaquopy {
             install("scipy")
         }
     }
-    
-    productFlavors {
-        getByName("") {
-        }
-    }
 }
 
 dependencies {
@@ -77,26 +72,12 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    
-    // OpenCV for image processing
     implementation("org.opencv:opencv-android:4.8.1")
-    
-    // Tesseract OCR
     implementation("com.rmtheis:tess-two:9.1.0")
-    
-    // Gson for JSON handling
     implementation("com.google.code.gson:gson:2.10.1")
-    
-    // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    
-    // Floating window
     implementation("com.github.yhaolpz:FloatWindow:1.0.9")
-    
-    // Permission handling
     implementation("com.guolindev.permissionx:permissionx:1.7.1")
-    
-    // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
